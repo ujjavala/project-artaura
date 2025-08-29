@@ -47,7 +47,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename={process.env.NODE_ENV === 'production' ? '/project-artaura' : ''}>
       <div className="App">
         {isAuthenticated && <Header user={user} onLogout={handleLogout} />}
         
