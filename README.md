@@ -273,3 +273,44 @@ https://scanloninstitute.org.au/mapping-social-cohesion-2024
 
 https://www.abs.gov.au/statistics/people/education/work-related-training-and-adult-learning-australia/2020-21
 
+## 🚀 CI/CD: GitHub Actions Build & Deploy
+
+This project includes a GitHub Actions workflow for automated build and deployment.
+
+- **Automatic Build**: On every push to `main`, the app is built using Node.js.
+- **Deployment**: The production build is deployed to GitHub Pages (or your chosen static hosting).
+
+### Setup
+
+1. Ensure your repository has a `gh-pages` branch (for GitHub Pages deploy).
+2. Set the `homepage` field in your `package.json` to your GitHub Pages URL (e.g., `https://username.github.io/art-beyond-barriers`).
+3. The workflow file is located at `.github/workflows/deploy.yml`.
+
+### Example Workflow
+
+```yaml
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+```
+

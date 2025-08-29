@@ -226,7 +226,7 @@ const SocialImpact = ({ user }) => {
               <h2>🎯 Your Personal Social Impact</h2>
               <div className="personal-impact-card">
                 <div className="impact-score">
-                  <div className="score-circle">
+                  <div>
                     <span className="score-number">{userImpact.personalImpactScore}</span>
                     <span className="score-label">Impact Score</span>
                   </div>
