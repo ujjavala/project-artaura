@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/project-artaura/static/css/main.6ab7993c.css",
-    "main.js": "/project-artaura/static/js/main.fad93d87.js",
+    "main.js": "/project-artaura/static/js/main.027e6d93.js",
     "index.html": "/project-artaura/index.html",
     "main.6ab7993c.css.map": "/project-artaura/static/css/main.6ab7993c.css.map",
-    "main.fad93d87.js.map": "/project-artaura/static/js/main.fad93d87.js.map"
+    "main.027e6d93.js.map": "/project-artaura/static/js/main.027e6d93.js.map"
   },
   "entrypoints": [
     "static/css/main.6ab7993c.css",
-    "static/js/main.fad93d87.js"
+    "static/js/main.027e6d93.js"
   ]
 }
