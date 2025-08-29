@@ -1,0 +1,164 @@
+.social-login {
+  width: 100%;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e8ecef;
+  border-radius: 12px;
+  background: var(--provider-bg, white);
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--provider-color);
+}
+
+.social-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.social-btn:hover::before {
+  left: 100%;
+}
+
+.social-icon {
+  font-size: 20px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-text {
+  flex: 1;
+  text-align: center;
+  margin-right: 24px; /* Balance the icon width */
+}
+
+.social-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(51, 51, 51, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--provider-color);
+  animation: social-spin 1s ease-in-out infinite;
+}
+
+@keyframes social-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.google-btn {
+  border-color: #db4437;
+}
+
+.google-btn:hover {
+  background: #fef7f7;
+}
+
+.microsoft-btn {
+  border-color: #00a1f1;
+}
+
+.microsoft-btn:hover {
+  background: #f0faff;
+}
+
+.linkedin-btn {
+  border-color: #0077b5;
+}
+
+.linkedin-btn:hover {
+  background: #f0f8ff;
+}
+
+.social-info {
+  margin-top: 20px;
+}
+
+.social-disclaimer {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Alternative compact layout for smaller screens */
+@media (max-width: 480px) {
+  .social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .social-btn {
+    padding: 12px 8px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .social-text {
+    font-size: 12px;
+    margin-right: 0;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+  }
+}
+
+/* Focus styles for accessibility */
+.social-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .social-btn {
+    border-width: 3px;
+  }
+  
+  .social-btn:hover {
+    background: white;
+    color: black;
+  }
+}

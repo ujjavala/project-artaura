@@ -1,0 +1,941 @@
+.projects {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.projects-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-header h1 {
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.projects-header p {
+  color: #64748b;
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.projects-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-section label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.projects-count {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-status-overlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.large {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.project-progress {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-bar {
+  width: 80px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: white;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  color: #1e40af;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.project-location,
+.project-phase {
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.project-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.project-tag {
+  padding: 0.25rem 0.75rem;
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.project-deadline {
+  color: #dc2626;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.project-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: white;
+}
+
+.modal-header {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.modal-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-header-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 2rem;
+}
+
+.modal-header-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.modal-location {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.modal-content {
+  padding: 2rem;
+}
+
+.modal-section {
+  margin-bottom: 2rem;
+}
+
+.modal-section h3 {
+  color: #1e40af;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.modal-section p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.modal-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.modal-stat {
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-stat .stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.modal-stat .stat-value {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.insight-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.insight-card h4 {
+  color: #1e40af;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.insight-card p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.insight-card p strong {
+  color: #1e40af;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.modal-section h3 small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #64748b;
+  font-style: italic;
+}
+
+.social-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-impact-card {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.social-impact-card.multicultural {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.social-impact-card.belonging {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.social-impact-card.youth {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.social-impact-card.economic {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.social-impact-card.interfaith {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: white;
+}
+
+.social-impact-card.safety {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: white;
+}
+
+.social-impact-card h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.9;
+}
+
+.social-impact-card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.social-impact-card small {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  line-height: 1.2;
+}
+
+.social-impact-explanation {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-impact-explanation p {
+  color: #374151;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.social-impact-explanation strong {
+  color: #1e40af;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  color: #475569;
+  border: 2px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+/* Learning Opportunities Section */
+.learning-opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.learning-opportunity-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learning-opportunity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.learning-opportunity-card.work {
+  border-left-color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(102, 126, 234, 0.02));
+}
+
+.learning-opportunity-card.personal {
+  border-left-color: #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.02));
+}
+
+.learning-opportunity-card.skills {
+  border-left-color: #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(245, 158, 11, 0.02));
+}
+
+.learning-opportunity-card.online {
+  border-left-color: #8b5cf6;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(139, 92, 246, 0.02));
+}
+
+.learning-opportunity-card h4 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.learning-opportunity-card p {
+  color: #555;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.learning-opportunity-card small {
+  color: #888;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.learning-barriers-mitigation {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.learning-barriers-mitigation h4 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+.learning-barriers-mitigation ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.learning-barriers-mitigation li {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.learning-barriers-mitigation strong {
+  color: #333;
+}
+
+/* Tablet Portrait */
+@media (max-width: 1024px) {
+  .projects {
+    padding: 1.5rem;
+  }
+  
+  .projects-container {
+    padding: 1.8rem;
+  }
+  
+  .projects-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .project-modal {
+    margin: 1.5rem;
+    max-width: calc(100vw - 3rem);
+  }
+  
+  .modal-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .social-impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .learning-opportunities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Landscape / Small Tablet */
+@media (max-width: 768px) {
+  .projects {
+    padding: 1rem;
+  }
+  
+  .projects-container {
+    padding: 1.5rem;
+  }
+  
+  .projects-header {
+    margin-bottom: 2rem;
+  }
+  
+  .projects-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .projects-header p {
+    font-size: 1rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .projects-controls {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    padding: 0.8rem;
+  }
+  
+  .filter-section {
+    justify-content: center;
+  }
+  
+  .projects-count {
+    text-align: center;
+  }
+  
+  .project-card {
+    margin: 0;
+  }
+  
+  .project-content {
+    padding: 1rem;
+  }
+  
+  .project-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .project-tags {
+    justify-content: center;
+  }
+  
+  .project-modal {
+    margin: 0.5rem;
+    max-height: calc(100vh - 1rem);
+    overflow-y: auto;
+  }
+  
+  .modal-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .modal-header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .modal-content {
+    padding: 1rem;
+  }
+  
+  .modal-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .insight-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-impact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .learning-opportunities-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .learning-opportunity-card {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .learning-barriers-mitigation {
+    padding: 1rem;
+  }
+  
+  .learning-barriers-mitigation ul {
+    padding-left: 1rem;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .projects {
+    padding: 0.8rem;
+  }
+  
+  .projects-container {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .projects-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .projects-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .projects-header p {
+    font-size: 0.9rem;
+  }
+  
+  .projects-controls {
+    padding: 0.6rem;
+    gap: 0.8rem;
+  }
+  
+  .filter-select {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .projects-count {
+    font-size: 0.8rem;
+  }
+  
+  .project-card {
+    border-radius: 8px;
+  }
+  
+  .project-content {
+    padding: 0.8rem;
+  }
+  
+  .project-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .project-location,
+  .project-phase {
+    font-size: 0.8rem;
+  }
+  
+  .stat {
+    padding: 0.5rem;
+  }
+  
+  .stat-number {
+    font-size: 0.9rem;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  
+  .project-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .project-deadline {
+    font-size: 0.7rem;
+  }
+  
+  .project-modal {
+    margin: 0;
+    border-radius: 0;
+    max-height: 100vh;
+    width: 100vw;
+  }
+  
+  .modal-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .modal-header img {
+    height: 160px;
+  }
+  
+  .modal-header-info h2 {
+    font-size: 1.3rem;
+  }
+  
+  .modal-location {
+    font-size: 0.8rem;
+  }
+  
+  .modal-content {
+    padding: 0.8rem;
+  }
+  
+  .modal-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .modal-section h4 {
+    font-size: 1rem;
+  }
+  
+  .modal-stat {
+    padding: 0.6rem;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  
+  .stat-value {
+    font-size: 0.8rem;
+  }
+  
+  .insight-card,
+  .social-impact-card,
+  .learning-opportunity-card {
+    padding: 0.8rem;
+  }
+  
+  .insight-card h4,
+  .social-impact-card h4,
+  .learning-opportunity-card h4 {
+    font-size: 0.9rem;
+  }
+  
+  .insight-card p,
+  .social-impact-card p,
+  .learning-opportunity-card p {
+    font-size: 0.8rem;
+  }
+  
+  .learning-barriers-mitigation {
+    padding: 0.8rem;
+  }
+  
+  .learning-barriers-mitigation h4 {
+    font-size: 0.9rem;
+  }
+  
+  .learning-barriers-mitigation li {
+    font-size: 0.75rem;
+  }
+  
+  .social-impact-explanation,
+  .learning-barriers-mitigation {
+    margin-top: 1rem;
+  }
+  
+  .modal-actions {
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .btn {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,858 @@
+.social-impact {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.social-impact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  font-size: 1.125rem;
+  color: #64748b;
+}
+
+/* Hero Section */
+.impact-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.impact-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #1e40af, #7c3aed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  display: block;
+}
+
+.hero-label {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Challenges Section */
+.challenges-section {
+  margin-bottom: 4rem;
+}
+
+.challenges-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 3rem;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.challenge-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.challenge-card:hover {
+  transform: translateY(-4px);
+}
+
+.challenge-card.immigration {
+  border-left: 4px solid #f59e0b;
+}
+
+.challenge-card.economic {
+  border-left: 4px solid #ef4444;
+}
+
+.challenge-card.interfaith {
+  border-left: 4px solid #8b5cf6;
+}
+
+.challenge-card.safety {
+  border-left: 4px solid #06b6d4;
+}
+
+.challenge-card.youth {
+  border-left: 4px solid #10b981;
+}
+
+.challenge-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.challenge-icon {
+  font-size: 2rem;
+}
+
+.challenge-header h3 {
+  color: #1e40af;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.challenge-stat {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ef4444;
+}
+
+.challenge-description {
+  color: #64748b;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.challenge-impact {
+  background: #f0f9ff;
+  border: 1px solid #0284c7;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #0369a1;
+  line-height: 1.4;
+}
+
+.challenge-impact strong {
+  font-weight: 600;
+}
+
+/* Solutions Section */
+.solutions-section {
+  margin-bottom: 4rem;
+}
+
+.solutions-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 3rem;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.solution-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.solution-card:hover {
+  transform: translateY(-4px);
+}
+
+.solution-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.solution-card h3 {
+  color: #1e40af;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.solution-stats {
+  margin: 1.5rem 0;
+}
+
+.solution-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.solution-card p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+/* Personal Impact Section */
+.personal-impact-section {
+  margin-bottom: 4rem;
+}
+
+.personal-impact-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 2rem;
+}
+
+.personal-impact-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+
+.impact-score {
+  text-align: center;
+}
+
+.score-circle {
+  width: 160px;
+  height: 160px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.score-number {
+  font-size: 4.5rem !important;
+  font-weight: 900 !important;
+  color: #fbbf24 !important;
+  /* text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(251, 191, 36, 0.3); */
+  letter-spacing: -0.03em !important;
+  line-height: 0.8 !important;
+  margin-bottom: 0.3rem !important;
+  display: block !important;
+}
+
+.score-label {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: #f8fafc !important;
+  opacity: 0.9 !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-top: 0.1rem !important;
+  display: block !important;
+}
+
+.impact-areas h3,
+.community-contribution h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.areas-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.impact-area-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.community-contribution ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.community-contribution li {
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.community-contribution strong {
+  font-weight: 600;
+}
+
+/* Data Sources Section */
+.data-sources-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 3rem;
+}
+
+.sources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.source-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.source-card.abs {
+  border-left: 4px solid #10b981;
+}
+
+.source-card.scanlon {
+  border-left: 4px solid #3b82f6;
+}
+
+.source-card h3 {
+  color: #1e40af;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.source-subtitle {
+  color: #64748b;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.source-stats {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.source-stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.source-stat:last-child {
+  margin-bottom: 0;
+}
+
+.source-stat span:first-child {
+  font-weight: 600;
+  color: #374151;
+}
+
+.source-stat span:last-child {
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.source-card p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+/* Tablet Portrait */
+@media (max-width: 1024px) {
+  .social-impact {
+    padding: 1.5rem 0;
+  }
+  
+  .social-impact-container {
+    padding: 0 1.5rem;
+  }
+  
+  .impact-hero {
+    padding: 2.5rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .impact-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .challenges-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .sources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .personal-impact-card {
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile Landscape / Small Tablet */
+@media (max-width: 768px) {
+  .social-impact {
+    padding: 1rem 0;
+  }
+  
+  .social-impact-container {
+    padding: 0 1rem;
+  }
+  
+  .impact-hero {
+    padding: 2rem 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .impact-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .hero-stat {
+    padding: 1rem;
+  }
+  
+  .hero-number {
+    font-size: 1.8rem;
+  }
+  
+  .hero-label {
+    font-size: 0.8rem;
+  }
+  
+  .challenges-section,
+  .solutions-section,
+  .personal-impact-section,
+  .data-sources-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .challenges-section h2,
+  .solutions-section h2,
+  .personal-impact-section h2,
+  .data-sources-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .challenges-grid,
+  .solutions-grid,
+  .sources-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .challenge-card,
+  .solution-card,
+  .source-card {
+    padding: 1.5rem;
+  }
+  
+  .challenge-header {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .challenge-icon {
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .challenge-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .challenge-stat {
+    font-size: 1.5rem;
+  }
+  
+  .challenge-description,
+  .challenge-impact {
+    font-size: 0.85rem;
+  }
+  
+  .solution-icon {
+    font-size: 2.5rem;
+  }
+  
+  .solution-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .solution-stats {
+    margin: 1rem 0;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  
+  .solution-card p {
+    font-size: 0.85rem;
+  }
+  
+  .personal-impact-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .score-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .score-number {
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+    color: #fbbf24 !important;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6), 0 1px 6px rgba(251, 191, 36, 0.3);
+    letter-spacing: -0.02em !important;
+    line-height: 0.8 !important;
+    margin-bottom: 0.2rem !important;
+  }
+  
+  .score-label {
+    font-size: 0.625rem !important;
+    font-weight: 500 !important;
+    color: #f8fafc !important;
+    opacity: 0.9 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    margin-top: 0.05rem !important;
+  }
+  
+  .impact-areas h3,
+  .community-contribution h3 {
+    font-size: 1rem;
+  }
+  
+  .impact-area-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+  
+  .community-contribution ul {
+    font-size: 0.8rem;
+  }
+  
+  .source-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .source-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .source-stats {
+    padding: 0.8rem;
+  }
+  
+  .source-stat {
+    font-size: 0.75rem;
+  }
+  
+  .source-card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .social-impact {
+    padding: 0.8rem 0;
+  }
+  
+  .social-impact-container {
+    padding: 0 0.8rem;
+  }
+  
+  .impact-hero {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+  }
+  
+  .impact-hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .hero-stat {
+    padding: 0.8rem;
+  }
+  
+  .hero-number {
+    font-size: 1.5rem;
+  }
+  
+  .hero-label {
+    font-size: 0.75rem;
+  }
+  
+  .challenges-section,
+  .solutions-section,
+  .personal-impact-section,
+  .data-sources-section {
+    margin-bottom: 2rem;
+  }
+  
+  .challenges-section h2,
+  .solutions-section h2,
+  .personal-impact-section h2,
+  .data-sources-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .challenges-grid,
+  .solutions-grid,
+  .sources-grid {
+    gap: 1rem;
+  }
+  
+  .challenge-card,
+  .solution-card,
+  .source-card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .challenge-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .challenge-icon {
+    font-size: 1.8rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .challenge-header h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .challenge-stat {
+    font-size: 1.2rem;
+  }
+  
+  .challenge-description {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .challenge-impact {
+    font-size: 0.75rem;
+  }
+  
+  .solution-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .solution-card h3 {
+    font-size: 1rem;
+  }
+  
+  .solution-stats {
+    margin: 0.8rem 0;
+  }
+  
+  .stat-number {
+    font-size: 1.2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  
+  .solution-card p {
+    font-size: 0.8rem;
+  }
+  
+  .personal-impact-card {
+    padding: 1.5rem 1rem;
+    gap: 1.2rem;
+  }
+  
+  .score-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .score-number {
+    font-size: 2rem !important;
+    font-weight: 900 !important;
+    color: #fbbf24 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(251, 191, 36, 0.3);
+    letter-spacing: -0.02em !important;
+    line-height: 0.8 !important;
+    margin-bottom: 0.15rem !important;
+  }
+  
+  .score-label {
+    font-size: 0.6rem !important;
+    font-weight: 500 !important;
+    color: #f8fafc !important;
+    opacity: 0.9 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    margin-top: 0.05rem !important;
+  }
+  
+  .impact-areas h3,
+  .community-contribution h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .areas-list {
+    gap: 0.4rem;
+  }
+  
+  .impact-area-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+  
+  .community-contribution ul {
+    font-size: 0.75rem;
+    padding-left: 1rem;
+  }
+  
+  .community-contribution li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .source-card h3 {
+    font-size: 1rem;
+  }
+  
+  .source-subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .source-stats {
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .source-stat {
+    font-size: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .source-card p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}
