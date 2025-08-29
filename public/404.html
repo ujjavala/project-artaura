@@ -7,10 +7,11 @@
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
       // This script redirects 404 errors to the root page with the path preserved
-      var pathSegments = location.pathname.slice(1).split('/');
+      var repo = '/art-beyond-barriers';
+      var path = location.pathname.slice(repo.length);
       location.replace(location.protocol + '//' + location.hostname + 
-        (location.port ? ':' + location.port : '') +
-        '/?/' + pathSegments.join('/'));
+        (location.port ? ':' + location.port : '') + repo +
+        '/?/' + path);
     </script>
   </head>
   <body>

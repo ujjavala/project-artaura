@@ -47,7 +47,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/art-beyond-barriers">
       <div className="App">
         {isAuthenticated && <Header user={user} onLogout={handleLogout} />}
         
