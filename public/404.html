@@ -5,13 +5,11 @@
     <title>Artaura - Art Beyond Barriers</title>
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
-      // https://github.com/rafgraph/spa-github-pages
       // This script redirects 404 errors to the root page with the path preserved
-      var repo = '/art-beyond-barriers';
-      var path = location.pathname.slice(repo.length);
+      var pathSegments = location.pathname.slice(1).split('/');
       location.replace(location.protocol + '//' + location.hostname + 
-        (location.port ? ':' + location.port : '') + repo +
-        '/?/' + path);
+        (location.port ? ':' + location.port : '') +
+        '/?/' + pathSegments.join('/'));
     </script>
   </head>
   <body>
