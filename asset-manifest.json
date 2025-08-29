@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/art-beyond-barriers/static/css/main.6ab7993c.css",
+    "main.js": "/art-beyond-barriers/static/js/main.fad93d87.js",
+    "index.html": "/art-beyond-barriers/index.html",
+    "main.6ab7993c.css.map": "/art-beyond-barriers/static/css/main.6ab7993c.css.map",
+    "main.fad93d87.js.map": "/art-beyond-barriers/static/js/main.fad93d87.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ab7993c.css",
+    "static/js/main.fad93d87.js"
+  ]
+}
