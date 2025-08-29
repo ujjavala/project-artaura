@@ -2,6 +2,7 @@
   "name": "artaura",
   "version": "1.0.0",
   "description": "Artaura - Art Beyond Barriers: Transforming construction sites into inclusive art spaces",
+  "homepage": "https://ujjavala.github.io/art-beyond-barriers",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
