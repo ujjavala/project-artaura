@@ -40,7 +40,7 @@ const Dashboard = ({ user }) => {
       phase: 'Community Engagement',
       artworks: 0,
       deadline: '2024-04-20',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop&crop=center'
+      image: 'https://plus.unsplash.com/premium_photo-1703385178754-f16e0a332e4a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWZyaWNhbiUyMHBhaW50aW5nc3xlbnwwfHwwfHx8MA%3D%3D?w=300&h=200&fit=crop&crop=center'
     },
     {
       id: 3,
@@ -50,7 +50,7 @@ const Dashboard = ({ user }) => {
       phase: 'Installation',
       artworks: 8,
       deadline: '2024-02-28',
-      image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&h=200&fit=crop&crop=center'
+      image: 'https://images.unsplash.com/photo-1714249158936-8e07d15c6397?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGluZGlhbiUyMHBhaW50aW5nc3xlbnwwfHwwfHx8MA%3D%3D?w=300&h=200&fit=crop&crop=center'
     }
   ];
 
@@ -80,7 +80,7 @@ const Dashboard = ({ user }) => {
       project: 'Pacific Highway Upgrade',
       status: 'Approved',
       submittedAt: '2024-01-12',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=80&h=80&fit=crop&crop=center'
+      image: 'https://images.unsplash.com/photo-1612373931332-9fbb9b2290a1?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhbiUyMHBhaW50aW5nc3xlbnwwfHwwfHx8MA%3D%3D?w=80&h=80&fit=crop&crop=center'
     },
     {
       id: 3,
@@ -97,10 +97,11 @@ const Dashboard = ({ user }) => {
     <div className="overview-content">
       <div className="artaura-branding">
         <div className="app-logo">
-          <span className="logo-icon">🎨</span>
           <div className="logo-text-container">
-            <h1 className="app-name">Artaura</h1>
-            <p className="app-tagline">Art Beyond Barriers</p>
+            <div className="logo-text-content">
+              <h1 className="app-name">🎨Artaura</h1>
+              <p className="app-tagline">Art Beyond Barriers</p>
+            </div>
           </div>
         </div>
         <div className="brand-description">
@@ -121,10 +122,16 @@ const Dashboard = ({ user }) => {
             🎨 Submit New Artwork
           </button>
           <button 
-            className="btn btn-secondary"
+            className="btn btn-primary"
             onClick={() => navigate('/social-impact')}
           >
             🤝 View Social Impact
+          </button>
+          <button 
+            className="btn btn-primary"
+            onClick={() => navigate('/ai-art-analyzer')}
+          >
+            🤖 Try AI Art Analyzer
           </button>
         </div>
       </div>
@@ -372,6 +379,158 @@ const Dashboard = ({ user }) => {
           </div>
         </div>
       )}
+
+      {/* AI Features Section */}
+      <div className="ai-features-section">
+        <div className="section-branding">
+          <h2>🤖 AI-Powered Community Building</h2>
+          <div className="section-subtitle">
+            <span className="brand-highlight">Art Beyond Barriers</span> × <span className="data-source">Advanced AI Technology</span>
+          </div>
+        </div>
+        <p className="section-description">
+          <strong>Artaura</strong> leverages cutting-edge AI to enhance cultural understanding, foster community connections, and maximize the social impact of every artwork.
+        </p>
+        
+        <div className="ai-features-grid">
+          <div className="ai-feature-card primary" onClick={() => navigate('/ai-art-analyzer')}>
+            <div className="ai-feature-header">
+              <div className="ai-feature-icon">🎨🤖</div>
+              <h3>AI Art Style Analyzer</h3>
+            </div>
+            <div className="ai-feature-content">
+              <p>Analyze artwork with advanced computer vision to identify cultural influences, artistic techniques, and social impact potential.</p>
+              <ul className="ai-feature-capabilities">
+                <li>✨ Cultural pattern recognition</li>
+                <li>🎯 Social impact prediction</li>
+                <li>🛡️ Cultural sensitivity assessment</li>
+                <li>👥 Similar artist recommendations</li>
+              </ul>
+              <div className="ai-feature-stats">
+                <div className="ai-stat">
+                  <span className="ai-stat-number">94%</span>
+                  <span className="ai-stat-label">Accuracy Rate</span>
+                </div>
+                <div className="ai-stat">
+                  <span className="ai-stat-number">15+</span>
+                  <span className="ai-stat-label">Art Styles Recognized</span>
+                </div>
+                <div className="ai-stat">
+                  <span className="ai-stat-number">98%</span>
+                  <span className="ai-stat-label">Cultural Sensitivity Score</span>
+                </div>
+              </div>
+            </div>
+            <div className="ai-feature-action">
+              <span className="try-now-btn">🚀 Analyze Your Art →</span>
+            </div>
+          </div>
+
+          <div className="ai-feature-card secondary" onClick={() => navigate('/ai-community-matcher')}>
+            <div className="ai-feature-header">
+              <div className="ai-feature-icon">🧠🤝</div>
+              <h3>AI Community Matcher</h3>
+            </div>
+            <div className="ai-feature-content">
+              <p>Find perfect collaboration partners, mentors, and community connections using intelligent matching algorithms.</p>
+              <ul className="ai-feature-capabilities">
+                <li>🌈 Cultural compatibility matching</li>
+                <li>🔧 Skill complementarity analysis</li>
+                <li>📍 Geographic optimization</li>
+                <li>🎯 Project opportunity suggestions</li>
+              </ul>
+              <div className="ai-feature-stats">
+                <div className="ai-stat">
+                  <span className="ai-stat-number">500+</span>
+                  <span className="ai-stat-label">Artists in Database</span>
+                </div>
+                <div className="ai-stat">
+                  <span className="ai-stat-number">92%</span>
+                  <span className="ai-stat-label">Match Success Rate</span>
+                </div>
+                <div className="ai-stat">
+                  <span className="ai-stat-number">6</span>
+                  <span className="ai-stat-label">Cultural Backgrounds</span>
+                </div>
+              </div>
+            </div>
+            <div className="ai-feature-action">
+              <span className="try-now-btn">🚀 Find Your Matches →</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="ai-impact-metrics">
+          <h3>🧠 AI-Driven Community Impact</h3>
+          <div className="ai-impact-grid">
+            <div className="ai-impact-card">
+              <div className="ai-impact-icon">🌍</div>
+              <div className="ai-impact-content">
+                <h4>Cultural Bridge-Building</h4>
+                <div className="ai-impact-stat">87% average community engagement score</div>
+                <p>AI identifies optimal cultural combinations for maximum social cohesion impact</p>
+              </div>
+            </div>
+            <div className="ai-impact-card">
+              <div className="ai-impact-icon">🎯</div>
+              <div className="ai-impact-content">
+                <h4>Precision Matching</h4>
+                <div className="ai-impact-stat">94% successful collaborations</div>
+                <p>Advanced algorithms ensure compatible partnerships across cultural and skill divides</p>
+              </div>
+            </div>
+            <div className="ai-impact-card">
+              <div className="ai-impact-icon">📚</div>
+              <div className="ai-impact-content">
+                <h4>Educational Value</h4>
+                <div className="ai-impact-stat">89% learning engagement rate</div>
+                <p>AI-curated cultural insights enhance community understanding and appreciation</p>
+              </div>
+            </div>
+            <div className="ai-impact-card">
+              <div className="ai-impact-icon">🚀</div>
+              <div className="ai-impact-content">
+                <h4>Innovation Acceleration</h4>
+                <div className="ai-impact-stat">3.5x faster project completion</div>
+                <p>Smart recommendations streamline collaboration and reduce planning time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="ai-testimonials">
+          <h3>💬 What Artists Say About Our AI Features</h3>
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <div className="testimonial-quote">"The AI Art Analyzer helped me understand the cultural significance of my work in ways I never considered. It's like having a cultural advisor and art historian in one tool."</div>
+              <div className="testimonial-author">
+                <div className="author-info">
+                  <strong>Maria Santos-Rodriguez</strong>
+                  <span>Latin American Community Artist</span>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <div className="testimonial-quote">"I found three perfect collaboration partners through the AI Community Matcher. The cultural compatibility insights were spot-on and led to our most successful project yet."</div>
+              <div className="testimonial-author">
+                <div className="author-info">
+                  <strong>Uncle Billy Warrawong</strong>
+                  <span>Aboriginal Traditional Artist</span>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <div className="testimonial-quote">"As a tech artist, the AI tools help me bridge traditional techniques with digital innovation. The recommendations opened doors to collaborations I never imagined."</div>
+              <div className="testimonial-author">
+                <div className="author-info">
+                  <strong>Anh Nguyen</strong>
+                  <span>Vietnamese-Australian Digital Artist</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="dashboard-sections">
         <div className="section active-projects">

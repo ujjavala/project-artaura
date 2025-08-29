@@ -47,6 +47,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline;
+  white-space: nowrap;
 }
 
 .nav-menu {
@@ -138,8 +140,35 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.notification-container {
+  position: relative;
+}
+
 .notification-btn {
   position: relative;
+}
+
+.notification-icon {
+  font-size: 16px;
+  display: inline-block;
+  line-height: 1;
+  transform-origin: center top;
+  transition: transform 0.3s ease;
+}
+
+.notification-icon.has-unread {
+  animation: ring 2s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(12deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(8deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .notification-badge {
@@ -155,6 +184,7 @@
   min-width: 18px;
   text-align: center;
   line-height: 1.2;
+  z-index: 10;
 }
 
 .user-profile {
@@ -246,7 +276,7 @@
   position: absolute;
   top: 100%;
   right: 0;
-  width: 280px;
+  width: 320px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -335,6 +365,9 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
   font-family: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dropdown-item:hover {
@@ -562,14 +595,13 @@
 /* Notifications Dropdown */
 .notifications-dropdown {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 8px);
   right: 0;
   width: 360px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 8px;
   z-index: 1001;
   max-height: 500px;
   overflow: hidden;

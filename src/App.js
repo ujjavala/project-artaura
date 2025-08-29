@@ -12,6 +12,8 @@ import MyFavorites from './components/MyFavorites/MyFavorites';
 import ArtistNetwork from './components/ArtistNetwork/ArtistNetwork';
 import MyImpact from './components/MyImpact/MyImpact';
 import Settings from './components/Settings/Settings';
+import AIArtAnalyzer from './components/AIArtAnalyzer/AIArtAnalyzer';
+import AICommunityMatcher from './components/AICommunityMatcher/AICommunityMatcher';
 import Header from './components/Header/Header';
 import './App.css';
 
@@ -165,6 +167,26 @@ function App() {
             element={
               isAuthenticated ? (
                 <Settings user={user} />
+              ) : (
+                <Navigate to="/login" replace />
+              )
+            } 
+          />
+          <Route 
+            path="/ai-art-analyzer" 
+            element={
+              isAuthenticated ? (
+                <AIArtAnalyzer user={user} />
+              ) : (
+                <Navigate to="/login" replace />
+              )
+            } 
+          />
+          <Route 
+            path="/ai-community-matcher" 
+            element={
+              isAuthenticated ? (
+                <AICommunityMatcher user={user} />
               ) : (
                 <Navigate to="/login" replace />
               )

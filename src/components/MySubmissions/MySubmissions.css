@@ -23,16 +23,15 @@
 .header-content h1 {
   font-size: 2.5rem;
   color: #2d3748;
-  margin-bottom: 10px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin: 0 0 10px 0;
+  font-weight: 700;
 }
 
 .header-content p {
   color: #718096;
   font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .header-stats {
@@ -129,7 +128,7 @@
 
 .submissions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 30px;
   margin-bottom: 40px;
 }
@@ -140,6 +139,9 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .submission-card:hover {
@@ -151,6 +153,7 @@
   position: relative;
   height: 250px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .submission-image img {
@@ -197,6 +200,9 @@
 
 .submission-content {
   padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .submission-header-card {
@@ -215,10 +221,10 @@
 }
 
 .status-badge {
-  padding: 6px 12px;
-  border-radius: 20px;
+  padding: 4px 10px;
+  border-radius: 15px;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -228,14 +234,16 @@
 .submission-description {
   color: #4a5568;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
 }
 
 .submission-details {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  flex: 1;
 }
 
 .detail-item {
@@ -256,7 +264,8 @@
   border-left: 4px solid #667eea;
   padding: 15px;
   border-radius: 0 8px 8px 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .feedback-section h4 {
@@ -276,16 +285,23 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #f1f5f9;
 }
 
 .action-btn {
-  padding: 8px 16px;
+  padding: 10px 16px;
   border: none;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
 }
 
 .view-btn {
@@ -374,6 +390,11 @@
   
   .header-content h1 {
     font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .header-content p {
+    font-size: 1rem;
   }
   
   .header-stats {
@@ -404,13 +425,21 @@
     gap: 20px;
   }
   
+  .submission-actions {
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .action-btn {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 90px;
+    padding: 12px 8px;
+    font-size: 11px;
+  }
+  
   .submission-header-card {
     flex-direction: column;
     gap: 10px;
-  }
-  
-  .submission-actions {
-    justify-content: center;
   }
 }
 

@@ -349,21 +349,26 @@
 }
 
 .artist-actions {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 8px !important;
+  margin-top: 15px !important;
 }
 
 .action-btn {
-  padding: 8px 14px;
-  border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  font-size: 11px;
-  font-weight: 600;
+  padding: 6px 4px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: white;
-  color: #4a5568;
+  background: white !important;
+  color: #4a5568 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 .view-profile:hover {
@@ -485,7 +490,17 @@
   }
   
   .artist-actions {
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .action-btn {
+    padding: 8px 4px;
+    font-size: 7px;
+  }
+  
+  .action-btn:nth-child(3) {
+    grid-column: 1 / -1;
   }
   
   .label {

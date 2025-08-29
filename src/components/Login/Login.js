@@ -137,17 +137,10 @@ const Login = ({ onLogin }) => {
 
             <button
               type="submit"
-              className={`btn btn-primary w-100 ${isLoading ? 'loading' : ''}`}
+              className="btn btn-primary w-100"
               disabled={isLoading}
             >
-              {isLoading ? (
-                <>
-                  <span className="spinner"></span>
-                  Signing In...
-                </>
-              ) : (
-                'Sign In'
-              )}
+              Sign In
             </button>
           </form>
 

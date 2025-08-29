@@ -29,7 +29,7 @@ const Profile = ({ user }) => {
     {
       id: 1,
       title: "Unity Bridges",
-      image: "/api/placeholder/300/200",
+      image: 'https://images.unsplash.com/photo-1554188248-986adbb73be4?w=400&h=300&fit=crop&crop=center',
       status: "approved",
       project: "Western Sydney Metro",
       date: "2024-01-15"
@@ -37,7 +37,7 @@ const Profile = ({ user }) => {
     {
       id: 2,
       title: "Cultural Harmony",
-      image: "/api/placeholder/300/200",
+      image: 'https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=400&h=300&fit=crop&crop=center',
       status: "pending",
       project: "Pacific Highway Upgrade",
       date: "2024-02-20"
@@ -45,7 +45,7 @@ const Profile = ({ user }) => {
     {
       id: 3,
       title: "Community Voices",
-      image: "/api/placeholder/300/200",
+      image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=300&fit=crop&crop=center',
       status: "featured",
       project: "Northern Beaches Link",
       date: "2023-12-10"

@@ -44,6 +44,20 @@ const Navigation = () => {
           <span className="tab-icon">🤝</span>
           Social Impact
         </button>
+        <button
+          className={`nav-tab ${location.pathname === '/ai-art-analyzer' ? 'active' : ''}`}
+          onClick={() => navigate('/ai-art-analyzer')}
+        >
+          <span className="tab-icon">🤖</span>
+          AI Art Analyzer
+        </button>
+        <button
+          className={`nav-tab ${location.pathname === '/ai-community-matcher' ? 'active' : ''}`}
+          onClick={() => navigate('/ai-community-matcher')}
+        >
+          <span className="tab-icon">🧠</span>
+          AI Community
+        </button>
       </div>
     </div>
   );

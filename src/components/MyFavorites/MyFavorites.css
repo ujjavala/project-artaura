@@ -386,18 +386,23 @@
 
 .favorite-actions {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .favorite-actions .action-btn {
-  padding: 8px 14px;
+  padding: 10px 16px;
   border: none;
-  border-radius: 18px;
-  font-size: 11px;
+  border-radius: 20px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
 }
 
 .view-btn {
@@ -548,5 +553,13 @@
   
   .favorite-actions {
     justify-content: center;
+    gap: 8px;
+  }
+  
+  .favorite-actions .action-btn {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 100px;
+    padding: 12px 8px;
+    font-size: 11px;
   }
 }

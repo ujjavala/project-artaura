@@ -95,9 +95,8 @@ const Header = ({ user, onLogout }) => {
     <header className="app-header">
       <div className="header-container">
         <div className="header-left">
-          <div className="logo">
-            <span className="logo-icon">🎨</span>
-            <span className="logo-text">Artaura</span>
+          <div className="logo" onClick={() => navigate('/dashboard')} style={{ cursor: 'pointer' }}>
+            <span className="logo-text">🎨Artaura</span>
           </div>
           
           <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
@@ -136,21 +135,74 @@ const Header = ({ user, onLogout }) => {
               <span className="nav-icon">🤝</span>
               Impact Overview
             </button>
+            <button 
+              className="nav-link"
+              onClick={() => navigate('/ai-art-analyzer')}
+            >
+              <span className="nav-icon">🤖</span>
+              AI Art Analyzer
+            </button>
+            <button 
+              className="nav-link"
+              onClick={() => navigate('/ai-community-matcher')}
+            >
+              <span className="nav-icon">🔗</span>
+              AI Community Matcher
+            </button>
           </nav>
         </div>
 
         <div className="header-right">
           <div className="header-actions">
-            <button 
-              className={`action-btn notification-btn ${isNotificationOpen ? 'active' : ''}`} 
-              onClick={toggleNotifications}
-              title="Notifications"
-            >
-              <span className="notification-icon">🔔</span>
-              {unreadCount > 0 && (
-                <span className="notification-badge">{unreadCount}</span>
+            <div className="notification-container">
+              <button 
+                className={`action-btn notification-btn ${isNotificationOpen ? 'active' : ''}`} 
+                onClick={toggleNotifications}
+                title="Notifications"
+              >
+                <span className={`notification-icon ${unreadCount > 0 ? 'has-unread' : ''}`}>🔔</span>
+              </button>
+              
+              {/* Notifications Dropdown */}
+              {isNotificationOpen && (
+                <div className="notifications-dropdown">
+                  <div className="notifications-header">
+                    <h4>🎨 Artaura Updates</h4>
+                    <button 
+                      className="mark-all-read-btn"
+                      onClick={() => setNotifications(prev => prev.map(n => ({ ...n, unread: false })))}
+                    >
+                      Mark all read
+                    </button>
+                  </div>
+                  <div className="notifications-list">
+                    {notifications.map(notification => (
+                      <div 
+                        key={notification.id} 
+                        className={`notification-item ${notification.unread ? 'unread' : ''}`}
+                        onClick={() => markNotificationAsRead(notification.id)}
+                      >
+                        <div className="notification-icon">{notification.icon}</div>
+                        <div className="notification-content">
+                          <h5 className="notification-title">{notification.title}</h5>
+                          <p className="notification-message">{notification.message}</p>
+                          <span className="notification-time">{notification.time}</span>
+                        </div>
+                        {notification.unread && <div className="unread-indicator"></div>}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="notifications-footer">
+                    <button 
+                      className="view-all-link"
+                      onClick={() => { setIsNotificationOpen(false); navigate('/notifications'); }}
+                    >
+                      View all notifications
+                    </button>
+                  </div>
+                </div>
               )}
-            </button>
+            </div>
           </div>
 
           {/* Search Bar */}
@@ -172,45 +224,6 @@ const Header = ({ user, onLogout }) => {
             </div>
           )}
 
-          {/* Notifications Dropdown */}
-          {isNotificationOpen && (
-            <div className="notifications-dropdown">
-              <div className="notifications-header">
-                <h4>🎨 Artaura Updates</h4>
-                <button 
-                  className="mark-all-read-btn"
-                  onClick={() => setNotifications(prev => prev.map(n => ({ ...n, unread: false })))}
-                >
-                  Mark all read
-                </button>
-              </div>
-              <div className="notifications-list">
-                {notifications.map(notification => (
-                  <div 
-                    key={notification.id} 
-                    className={`notification-item ${notification.unread ? 'unread' : ''}`}
-                    onClick={() => markNotificationAsRead(notification.id)}
-                  >
-                    <div className="notification-icon">{notification.icon}</div>
-                    <div className="notification-content">
-                      <h5 className="notification-title">{notification.title}</h5>
-                      <p className="notification-message">{notification.message}</p>
-                      <span className="notification-time">{notification.time}</span>
-                    </div>
-                    {notification.unread && <div className="unread-indicator"></div>}
-                  </div>
-                ))}
-              </div>
-              <div className="notifications-footer">
-                <button 
-                  className="view-all-link"
-                  onClick={() => { setIsNotificationOpen(false); navigate('/notifications'); }}
-                >
-                  View all notifications
-                </button>
-              </div>
-            </div>
-          )}
 
           <div className="user-profile">
             <button 
@@ -378,6 +391,20 @@ const Header = ({ user, onLogout }) => {
             >
               <span className="mobile-nav-icon">🤝</span>
               Impact Overview
+            </button>
+            <button 
+              className="mobile-nav-link"
+              onClick={() => { setIsMenuOpen(false); navigate('/ai-art-analyzer'); }}
+            >
+              <span className="mobile-nav-icon">🤖</span>
+              AI Art Analyzer
+            </button>
+            <button 
+              className="mobile-nav-link"
+              onClick={() => { setIsMenuOpen(false); navigate('/ai-community-matcher'); }}
+            >
+              <span className="mobile-nav-icon">🔗</span>
+              AI Community Matcher
             </button>
             <div className="mobile-nav-divider"></div>
             <div className="mobile-nav-section-title">My Account</div>
