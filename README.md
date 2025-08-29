@@ -1,6 +1,6 @@
-# 🎨Artaura: Art Beyond Barriers
+# 🎨 Artaura: Art Beyond Barriers
 
-🎨 **Transforming construction sites into inclusive art spaces with AI-powered community building**
+**Transforming construction sites into inclusive art spaces with AI-powered community building**
 
 Artaura is an innovative React.js web application designed to support Australia's groundbreaking program that transforms construction site barriers into vibrant displays of community art and cultural expression. Enhanced with cutting-edge AI technology, Artaura creates meaningful connections between artists, communities, and infrastructure projects.
 
@@ -94,6 +94,9 @@ Launches the test runner in the interactive watch mode.
 
 ```
 art-beyond-barriers/
+├── docs/
+│   ├── AI_ARCHITECTURE.md           # 🧠 AI & Agentic AI Documentation
+│   └── TECHNICAL_ARCHITECTURE.md    # 🏗️ System Design & Architecture
 ├── public/
 │   └── index.html
 ├── src/
@@ -206,36 +209,6 @@ This application supports Australia's mission to:
 - **Build Community**: Connect local artists with infrastructure projects
 - **Cultural Representation**: Ensure diverse voices are heard in public art
 
-## 🤖 AI Technology Stack
-
-### Machine Learning Capabilities
-- **Computer Vision**: Advanced image analysis for cultural pattern recognition
-- **Natural Language Processing**: Intelligent parsing of artist statements and cultural descriptions  
-- **Recommendation Systems**: Collaborative filtering for artist matching and artwork suggestions
-- **Predictive Analytics**: Social impact modeling using ABS and Scanlon Institute data
-- **Cultural Sensitivity AI**: Trained models for respectful representation assessment
-
-### AI Features Implementation
-- **Realistic Processing Simulation**: Authentic AI analysis experience with 3.5-second processing times
-- **Comprehensive Mock Data**: 500+ artist profiles spanning 6 cultural backgrounds
-- **Intelligent Scoring**: 94% accuracy rates and 92% match success simulation
-- **Educational AI Responses**: Culturally sensitive insights and historical context generation
-
-## 🔮 Future Enhancements
-
-- **Real-time AI Collaboration**: WebSocket integration for live AI-assisted project collaboration
-- **Advanced Predictive Modeling**: Deep learning for infrastructure project success prediction
-- **Mobile AI Tools**: React Native app with on-device AI art analysis
-- **Enhanced Cultural AI**: Expanded recognition for 15+ cultural artistic traditions
-- **Community Sentiment Analysis**: Real-time social media and community feedback AI processing
-- **Blockchain Integration**: Secure, decentralized artist attribution and royalty management
-
-## 🤝 Contributing
-
-This application was created as part of the "Govhack 2025"
-
-**Artaura: Art Beyond Barriers** - Because a wall doesn't have to divide us — it can bring us together through AI-powered community building and cultural celebration. 🎨🤖✨
-
 ## 🏆 Key Achievements
 
 ### AI Innovation
@@ -255,23 +228,6 @@ This application was created as part of the "Govhack 2025"
 - **Accessibility Focused**: WCAG compliant with screen reader support
 - **Performance Optimized**: Fast loading with efficient image processing
 - **Scalable Architecture**: Component-based React.js with modular AI services
-
-
-**DataSets Used:**
-
-https://www.abs.gov.au/statistics/people/education/education-and-work-australia/may-2024
-
-https://www.abs.gov.au/statistics/measuring-what-matters/measuring-what-matters-themes-and-indicators/prosperous/skills-development
-
-https://www.abs.gov.au/statistics/measuring-what-matters/measuring-what-matters-themes-and-indicators/prosperous/broadening-access-work
-
-https://www.abs.gov.au/statistics/measuring-what-matters/measuring-what-matters-themes-and-indicators/prosperous/job-opportunities
-
-https://www.abs.gov.au/statistics/measuring-what-matters/measuring-what-matters-themes-and-indicators/prosperous/job-satisfaction
-
-https://scanloninstitute.org.au/mapping-social-cohesion-2024
-
-https://www.abs.gov.au/statistics/people/education/work-related-training-and-adult-learning-australia/2020-21
 
 ## 🚀 CI/CD: GitHub Actions Build & Deploy
 
@@ -314,3 +270,38 @@ jobs:
           publish_dir: ./build
 ```
 
+## 📚 Documentation
+
+### Comprehensive Technical Documentation
+
+- **[AI Architecture](docs/AI_ARCHITECTURE.md)** - Complete guide to AI agents, machine learning models, and agentic AI implementation
+- **[Technical Architecture](docs/TECHNICAL_ARCHITECTURE.md)** - System design, database schema, API endpoints, and deployment architecture
+
+### Dataset Sources
+
+The application integrates with real Australian government and research datasets:
+
+- [ABS Education & Work Data (May 2024)](https://www.abs.gov.au/statistics/people/education/education-and-work-australia/may-2024)
+- [ABS Skills Development Indicators](https://www.abs.gov.au/statistics/measuring-what-matters/measuring-what-matters-themes-and-indicators/prosperous/skills-development)
+- [ABS Job Opportunities Data](https://www.abs.gov.au/statistics/measuring-what-matters/measuring-what-matters-themes-and-indicators/prosperous/job-opportunities)
+- [ABS Work-Related Training Data](https://www.abs.gov.au/statistics/people/education/work-related-training-and-adult-learning-australia/2020-21)
+- [Scanlon Institute Social Cohesion Mapping](https://scanloninstitute.org.au/mapping-social-cohesion-2024)
+
+## 🔮 Future Enhancements
+
+- **Real-time AI Collaboration**: WebSocket integration for live AI-assisted project collaboration
+- **Advanced Predictive Modeling**: Deep learning for infrastructure project success prediction
+- **Mobile AI Tools**: React Native app with on-device AI art analysis
+- **Enhanced Cultural AI**: Expanded recognition for 15+ cultural artistic traditions
+- **Community Sentiment Analysis**: Real-time social media and community feedback AI processing
+- **Blockchain Integration**: Secure, decentralized artist attribution and royalty management
+
+## 🤝 Contributing
+
+This application was created as part of the "Govhack 2025"
+
+**Artaura: Art Beyond Barriers** - Because a wall doesn't have to divide us — it can bring us together through AI-powered community building and cultural celebration. 🎨🤖✨
+
+---
+
+*For detailed technical implementation, AI architecture, and system design information, please refer to the [documentation](docs/) folder.*
