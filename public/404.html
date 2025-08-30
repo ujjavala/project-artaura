@@ -8,9 +8,14 @@
       // This script redirects 404 errors to the root page with the path preserved
       var repo = '/project-artaura';
       var path = location.pathname.slice(repo.length);
-      location.replace(location.protocol + '//' + location.hostname + 
-        (location.port ? ':' + location.port : '') + repo +
-        '/?/' + path);
+      if (path && path !== '/') {
+        location.replace(location.protocol + '//' + location.hostname + 
+          (location.port ? ':' + location.port : '') + repo +
+          '/?p=' + path.slice(1) + location.search + location.hash);
+      } else {
+        location.replace(location.protocol + '//' + location.hostname + 
+          (location.port ? ':' + location.port : '') + repo + '/');
+      }
     </script>
   </head>
   <body>
