@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import absDataService from '../../services/absDataService';
 import socialCohesionService from '../../services/socialCohesionService';
 import './Gallery.css';
 
 const Gallery = ({ user }) => {
+  const navigate = useNavigate();
   const [selectedArtwork, setSelectedArtwork] = useState(null);
   const [filterCategory, setFilterCategory] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
@@ -321,7 +323,7 @@ const Gallery = ({ user }) => {
             </div>
             <button 
               className="book-trip-btn"
-              onClick={() => window.location.href = '/submit-artwork'}
+              onClick={() => navigate('/submit-artwork')}
             >
               📅 Book School Field Trip
             </button>
